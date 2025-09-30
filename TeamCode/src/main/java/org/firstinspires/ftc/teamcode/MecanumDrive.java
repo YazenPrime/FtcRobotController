@@ -18,10 +18,10 @@ public class MecanumDrive extends LinearOpMode {
 
     // variables
     private ElapsedTime runtime = new ElapsedTime();
-    private DcMotor leftFrontDrive = null;
-    private DcMotor leftBackDrive = null;
-    private DcMotor rightFrontDrive = null;
-    private DcMotor rightBackDrive = null;
+    private DcMotor leftFrontDrive = null; // W1
+    private DcMotor leftBackDrive = null; // W4
+    private DcMotor rightFrontDrive = null; // W2
+    private DcMotor rightBackDrive = null; // W3
     private DcMotor armTilt2 = null;
     private DcMotor armScissor = null;
     private DcMotor armTilt = null;
@@ -33,10 +33,10 @@ public class MecanumDrive extends LinearOpMode {
 
         // Initialize the hardware variables. 
         // Names are the same as on the Control Hub.
-        leftFrontDrive  = hardwareMap.get(DcMotor.class, "frontLeftMotor"); // port 0
-        rightFrontDrive = hardwareMap.get(DcMotor.class, "frontRightMotor"); //port 1
-        leftBackDrive  = hardwareMap.get(DcMotor.class, "backLeftMotor"); // port 2
-        rightBackDrive = hardwareMap.get(DcMotor.class, "backRightMotor"); // port 3. 
+        leftFrontDrive  = hardwareMap.get(DcMotor.class, "frontLeftMotor"); // port 0 / W1
+        rightFrontDrive = hardwareMap.get(DcMotor.class, "frontRightMotor"); // port 1 / W2
+        leftBackDrive  = hardwareMap.get(DcMotor.class, "backLeftMotor"); // port 2 / W4
+        rightBackDrive = hardwareMap.get(DcMotor.class, "backRightMotor"); // port 3 / W3
         armTilt2 = hardwareMap.get(DcMotor.class, "armTilt2"); //expansion 0
         armTilt = hardwareMap.get(DcMotor.class, "armTilt"); //expansion 2
         armScissor = hardwareMap.get(DcMotor.class, "armScissor"); //expansion 1
